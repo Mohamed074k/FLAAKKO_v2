@@ -11,3 +11,16 @@
 .animate-fade-slide {
   animation: fade-slide 2s cubic-bezier(0.4,0,0.2,1);
 }
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("/src/assets/fonts/monument-extended.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonumentExtended";
+  src: url("/src/assets/fonts/monument-extended-ultrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}

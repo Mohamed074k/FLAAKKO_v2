@@ -95,10 +95,10 @@ const Checkout = () => {
               {cart.map((item) => (
                 <li key={item.id} className="flex justify-between items-center py-2">
                   <div>
-                    <span className="font-medium">{item.title}</span>
+                    <span className="font-medium">{item.name}</span>
                     <span className="ml-2 text-gray-500">x{item.qty || 1}</span>
                   </div>
-                  <span>${(item.price * (item.qty || 1)).toFixed(2)}</span>
+                   <span>${(item.price * (item.qty || 1)).toFixed(2)}</span>
                 </li>
               ))}
             </ul>

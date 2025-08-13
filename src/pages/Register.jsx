@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: ''
+  });
+  
+  const [focusedFields, setFocusedFields] = useState({
+    name: false,
+    email: false,
+    password: false
+  });
+
+  const handleFocus = (field) => {
+    setFocusedFields(prev => ({ ...prev, [field]: true }));
+  };
+
+  const handleBlur = (field) => {
+    if (!formData[field]) {
+      setFocusedFields(prev => ({ ...prev, [field]: false }));
+    }
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id.toLowerCase()]: value }));
+  };
+
   return (
     <>
       <Navbar />
@@ -11,34 +38,70 @@ const Register = () => {
         <h1 className="text-center text-3xl font-bold mb-2">Register</h1>
         <hr className="mb-6" />
         <div className="flex justify-center items-center min-h-[300px]">
-          <div className="w-full">
+          <div className="w-4/5 md:w-full">
             <form>
-              <div className="mb-4">
-                <label htmlFor="Name" className="block mb-1 font-medium">Full Name</label>
+              <div className="relative mb-8">
                 <input
                   type="text"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  id="Name"
-                  placeholder="Enter Your Name"
+                  className="w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  onFocus={() => handleFocus('name')}
+                  onBlur={() => handleBlur('name')}
                 />
+                <label 
+                  htmlFor="name" 
+                  className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
+                    focusedFields.name || formData.name 
+                      ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
+                      : 'translate-y-3 top-0 text-gray-500'
+                  } pointer-events-none bg-white px-1`}
+                >
+                  Full Name
+                </label>
               </div>
-              <div className="mb-4">
-                <label htmlFor="Email" className="block mb-1 font-medium">Email address</label>
+              <div className="relative mb-8">
                 <input
                   type="email"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  id="Email"
-                  placeholder="name@example.com"
+                  className="w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  onFocus={() => handleFocus('email')}
+                  onBlur={() => handleBlur('email')}
                 />
+                <label 
+                  htmlFor="email" 
+                  className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
+                    focusedFields.email || formData.email 
+                      ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
+                      : 'translate-y-3 top-0 text-gray-500'
+                  } pointer-events-none bg-white px-1`}
+                >
+                  Email address
+                </label>
               </div>
-              <div className="mb-4">
-                <label htmlFor="Password" className="block mb-1 font-medium">Password</label>
+              <div className="relative mb-8">
                 <input
                   type="password"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
-                  id="Password"
-                  placeholder="Password"
+                  className="w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer"
+                  id="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  onFocus={() => handleFocus('password')}
+                  onBlur={() => handleBlur('password')}
                 />
+                <label 
+                  htmlFor="password" 
+                  className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
+                    focusedFields.password || formData.password 
+                      ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
+                      : 'translate-y-3 top-0 text-gray-500'
+                  } pointer-events-none bg-white px-1`}
+                >
+                  Password
+                </label>
               </div>
               <div className="mb-4">
                 <p>Already have an account?{' '}
@@ -63,4 +126,4 @@ const Register = () => {
   );
 };
 
-export default Register; 
+export default Register;

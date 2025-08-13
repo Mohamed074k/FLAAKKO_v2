@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isEmailFocused, setIsEmailFocused] = useState(false);
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -11,25 +16,49 @@ const Login = () => {
         <h1 className="text-center text-3xl font-bold mb-2">Login</h1>
         <hr className="mb-6" />
         <div className="flex justify-center items-center min-h-[300px]">
-          <div className="w-full">
+          <div className="w-4/5 md:w-full">
             <form>
-              <div className="mb-4">
-                <label htmlFor="floatingInput" className="block mb-1 font-medium">Email address</label>
+              <div className="relative mb-8">
                 <input
                   type="email"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className={`w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer`}
                   id="floatingInput"
-                  placeholder="name@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() => setIsEmailFocused(true)}
+                  onBlur={() => !email && setIsEmailFocused(false)}
                 />
+                <label 
+                  htmlFor="floatingInput" 
+                  className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
+                    isEmailFocused || email 
+                      ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
+                      : 'translate-y-3 top-0 text-gray-500'
+                  } pointer-events-none bg-white px-1`}
+                >
+                  Email address
+                </label>
               </div>
-              <div className="mb-4">
-                <label htmlFor="floatingPassword" className="block mb-1 font-medium">Password</label>
+              <div className="relative mb-8">
                 <input
                   type="password"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className={`w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer`}
                   id="floatingPassword"
-                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onFocus={() => setIsPasswordFocused(true)}
+                  onBlur={() => !password && setIsPasswordFocused(false)}
                 />
+                <label 
+                  htmlFor="floatingPassword" 
+                  className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
+                    isPasswordFocused || password 
+                      ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
+                      : 'translate-y-3 top-0 text-gray-500'
+                  } pointer-events-none bg-white px-1`}
+                >
+                  Password
+                </label>
               </div>
               <div className="mb-4">
                 <p>New Here?{' '}
@@ -54,4 +83,4 @@ const Login = () => {
   );
 };
 
-export default Login; 
+export default Login;
