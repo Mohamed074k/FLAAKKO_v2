@@ -24,3 +24,47 @@
   font-weight: 800;
   font-style: normal;
 }
+
+
+       .custom-dots {
+          position: absolute !important;
+          bottom: 20px !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          gap: 8px !important;
+          z-index: 30 !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          width: auto !important;
+        }
+
+        .custom-dots li {
+          width: 12px !important;
+          height: 12px !important;
+          margin: 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+
+        .custom-dots .slick-dot-custom {
+          transition: background-color 0.3s ease, opacity 0.3s ease;
+        }
+
+        .custom-dots li.slick-active .slick-dot-custom {
+          animation: pulse 1.5s ease-in-out infinite;
+          background-color: #ffffff;
+          opacity: 1;
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.2);
+          }
+        }

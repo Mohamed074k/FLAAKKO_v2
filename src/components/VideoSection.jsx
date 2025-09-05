@@ -1,5 +1,5 @@
 import React from 'react';
-import heroVideo from '../assets/videos/hero.mp4';
+import heroVideo from '/videos/hero.mp4';
 
 const VideoSection = () => {
   return (
@@ -23,7 +23,7 @@ const VideoSection = () => {
         {/* Centered Logo */}
         <div className="w-1/2 md:w-1/3 lg:w-1/4 max-w-xs">
           <img 
-            src="/src/assets/images/logo-hero.png" 
+            src="/images/logo-hero.png" 
             alt="Hero Logo"
             className="w-full h-auto"
           />

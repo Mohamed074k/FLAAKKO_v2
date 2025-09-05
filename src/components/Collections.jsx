@@ -76,7 +76,7 @@ const Collections = () => {
                     className="w-full h-full object-cover rounded-3xl"
                   />
                   <motion.div 
-                    className="absolute bottom-0 left-0 p-6 text-left w-full"
+                    className="absolute bottom-0 md:left-0 md:p-6 text-left w-full"
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, margin: "-50px" }}
@@ -128,7 +128,7 @@ const Collections = () => {
                     className="w-full h-full object-cover rounded-3xl"
                   />
                   <motion.div 
-                    className="absolute bottom-0 left-0 p-8 text-left w-full"
+                    className="absolute bottom-0 md:left-0 md:p-8 text-left w-full"
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, margin: "-50px" }}
@@ -156,7 +156,7 @@ const Collections = () => {
                           className="relative overflow-hidden inline-block bg-neutral-800 text-white px-6 py-2 text-sm font-medium rounded-full hover:bg-black transition-colors bg-opacity-80 group"
                         >
                           <span className="relative z-10">{item.buttonText}</span>
-                          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
                         </Link>
                       </motion.div>
                     </motion.div>

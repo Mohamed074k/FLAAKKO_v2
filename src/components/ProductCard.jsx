@@ -171,10 +171,10 @@ const ProductCard = ({
           </h3>
           <p className="text-xs text-gray-500 mt-1 uppercase">{product.category}</p>
           <div className="flex justify-between items-center mt-1">
-            <p className="text-sm font-medium text-gray-900">${product.price.toFixed(2)}</p>
+            <p className="text-sm font-medium text-gray-900">{product.price.toFixed(2)} EGP</p>
             {product.originalPrice && (
               <p className="text-sm text-gray-500 line-through">
-                ${product.originalPrice.toFixed(2)}
+                {product.originalPrice.toFixed(2)} EGP
               </p>
             )}
           </div>

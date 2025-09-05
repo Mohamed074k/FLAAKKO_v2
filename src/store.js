@@ -7,29 +7,55 @@ const legacyCartSlice = createSlice({
   initialState: [],
   reducers: {
     addCart: (state, action) => {
+      const product = action.payload;
       const existingItemIndex = state.findIndex(item => {
         // Check if item already exists in cart with same ID, variant, and size
-        return item.id === action.payload.id && 
-               (item.size === action.payload.size) &&
-               (item.selectedVariant === action.payload.selectedVariant);
+        return item.id === product.id && 
+               (item.size === product.size) &&
+               (item.selectedVariant === product.selectedVariant);
       });
       
       if (existingItemIndex >= 0) {
-        // If item exists, increment quantity
-        state[existingItemIndex].qty = (state[existingItemIndex].qty || 1) + (action.payload.qty || 1);
+        // If item exists, check if we can increment quantity
+        const existingItem = state[existingItemIndex];
+        const newQty = (existingItem.qty || 1) + (product.qty || 1);
+        
+        // Check if requested quantity exceeds available stock
+        if (product.stock !== undefined && newQty > product.stock) {
+          // Don't modify state, just return current state
+          // The error will be handled by the UI component
+          return state;
+        }
+        
+        // If we have enough stock, update the quantity
+        state[existingItemIndex].qty = newQty;
       } else {
-        // If item doesn't exist, add it with quantity 1
-        state.push({ ...action.payload, qty: action.payload.qty || 1 });
+        // If item doesn't exist and we have stock, add it
+        if (product.stock === undefined || (product.qty || 1) <= product.stock) {
+          state.push({ ...product, qty: product.qty || 1 });
+        }
       }
+      
+      // Save to localStorage for persistence
+      localStorage.setItem('cart', JSON.stringify(state));
     },
     removeFromCart: (state, action) => {
-      return state.filter(item => item.id !== action.payload.id);
+      const newState = state.filter(item => item.id !== action.payload.id);
+      localStorage.setItem('cart', JSON.stringify(newState));
+      return newState;
     },
-    clearCart: () => [],
+    clearCart: () => {
+      localStorage.removeItem('cart');
+      return [];
+    },
     incrementQty: (state, action) => {
       const item = state.find(item => item.id === action.payload.id);
       if (item) {
-        item.qty = (item.qty || 1) + 1;
+        // Check if we can increment without exceeding stock
+        if (item.stock === undefined || (item.qty + 1) <= item.stock) {
+          item.qty = (item.qty || 1) + 1;
+          localStorage.setItem('cart', JSON.stringify(state));
+        }
       }
     },
     decrementQty: (state, action) => {
@@ -41,6 +67,7 @@ const legacyCartSlice = createSlice({
         } else {
           state.splice(itemIndex, 1);
         }
+        localStorage.setItem('cart', JSON.stringify(state));
       }
     }
   }

@@ -1,35 +1,15 @@
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Register = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: ''
-  });
-  
-  const [focusedFields, setFocusedFields] = useState({
-    name: false,
-    email: false,
-    password: false
-  });
-
-  const handleFocus = (field) => {
-    setFocusedFields(prev => ({ ...prev, [field]: true }));
-  };
-
-  const handleBlur = (field) => {
-    if (!formData[field]) {
-      setFocusedFields(prev => ({ ...prev, [field]: false }));
-    }
-  };
-
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({ ...prev, [id.toLowerCase()]: value }));
-  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [isEmailFocused, setIsEmailFocused] = useState(false);
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+  const [isNameFocused, setisNameFocused] = useState(false);
 
   return (
     <>
@@ -40,20 +20,20 @@ const Register = () => {
         <div className="flex justify-center items-center min-h-[300px]">
           <div className="w-4/5 md:w-full">
             <form>
-              <div className="relative mb-8">
+                    <div className="relative mb-8">
                 <input
                   type="text"
-                  className="w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer"
-                  id="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  onFocus={() => handleFocus('name')}
-                  onBlur={() => handleBlur('name')}
+                  className={`w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer`}
+                  id="floatingName"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  onFocus={() => setisNameFocused(true)}
+                  onBlur={() => !name && setisNameFocused(false)}
                 />
                 <label 
-                  htmlFor="name" 
+                  htmlFor="floatingName" 
                   className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
-                    focusedFields.name || formData.name 
+                    isNameFocused || name 
                       ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
                       : 'translate-y-3 top-0 text-gray-500'
                   } pointer-events-none bg-white px-1`}
@@ -64,17 +44,17 @@ const Register = () => {
               <div className="relative mb-8">
                 <input
                   type="email"
-                  className="w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  onFocus={() => handleFocus('email')}
-                  onBlur={() => handleBlur('email')}
+                  className={`w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer`}
+                  id="floatingInput"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() => setIsEmailFocused(true)}
+                  onBlur={() => !email && setIsEmailFocused(false)}
                 />
                 <label 
-                  htmlFor="email" 
+                  htmlFor="floatingInput" 
                   className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
-                    focusedFields.email || formData.email 
+                    isEmailFocused || email 
                       ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
                       : 'translate-y-3 top-0 text-gray-500'
                   } pointer-events-none bg-white px-1`}
@@ -85,17 +65,17 @@ const Register = () => {
               <div className="relative mb-8">
                 <input
                   type="password"
-                  className="w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer"
-                  id="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  onFocus={() => handleFocus('password')}
-                  onBlur={() => handleBlur('password')}
+                  className={`w-full px-4 pt-5 pb-1 border rounded focus:outline-none focus:ring-2 focus:ring-black peer`}
+                  id="floatingPassword"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onFocus={() => setIsPasswordFocused(true)}
+                  onBlur={() => !password && setIsPasswordFocused(false)}
                 />
                 <label 
-                  htmlFor="password" 
+                  htmlFor="floatingPassword" 
                   className={`absolute left-3 transition-all duration-200 ease-in-out transform ${
-                    focusedFields.password || formData.password 
+                    isPasswordFocused || password 
                       ? 'text-xs md:text-xm text-black -translate-y-4 top-1' 
                       : 'translate-y-3 top-0 text-gray-500'
                   } pointer-events-none bg-white px-1`}
@@ -103,8 +83,9 @@ const Register = () => {
                   Password
                 </label>
               </div>
+              
               <div className="mb-4">
-                <p>Already have an account?{' '}
+                <p>Have an account?{' '}
                   <Link to="/login" className="underline text-blue-600 hover:text-blue-800">Login</Link>
                 </p>
               </div>

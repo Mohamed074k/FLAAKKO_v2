@@ -1,28 +1,31 @@
+ 
+
 // Main products array
 export const products = [
   // T-Shirts
   {
     id: 1,
     name: 'Classic White Tee',
-    slug: 'classic-white-tee',
+    slug: 'classic',
     price: 29.99,
     originalPrice: 34.99,
     description: 'Premium quality cotton t-shirt',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -34,20 +37,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 0,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -59,20 +63,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -84,20 +89,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
-        '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-        '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -109,20 +115,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-           '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -134,20 +141,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-    '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-      '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -159,20 +167,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-   '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-        '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -184,20 +193,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
-     '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -209,20 +219,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-    '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-    '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -234,20 +245,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-    '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-         '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -259,20 +271,21 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-    '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-      '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -284,26 +297,27 @@ export const products = [
     price: 34.99,
     description: 'Essential black t-shirt for any wardrobe',
     category: 't-shirts',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['S', 'M', 'L', 'XL'],
         images: [
-        '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
   },
 
-  
+
   // Hoodies
   {
     id: 13,
@@ -313,20 +327,21 @@ export const products = [
     originalPrice: 99.99,
     description: 'Comfortable and stylish black hoodie',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-    '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'Black',
         size: ['M', 'L', 'XL'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -338,20 +353,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
-         '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -363,20 +379,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-    '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -389,20 +406,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-       '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -414,20 +432,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-        '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-            '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -439,20 +458,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
-     '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+      '/images/placeholder.png'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-              '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png'
+          '/images/placeholder.png',
+          '/images/placeholder.png'
         ]
       }
     ]
@@ -464,20 +484,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/productos-hoodie-de-gira-blanco-2.jpg'
+      '/images/placeholder.png',
+      '/images/productos-hoodie-de-gira-blanco-2.jpg'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png',
+          '/images/placeholder.png',
+          '/images/placeholder.png',
         ]
       }
     ]
@@ -489,20 +510,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/productos-hoodie-de-gira-blanco-2.jpg'
+      '/images/placeholder.png',
+      '/images/productos-hoodie-de-gira-blanco-2.jpg'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png',
+          '/images/placeholder.png',
+          '/images/placeholder.png',
         ]
       }
     ]
@@ -514,20 +536,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/productos-hoodie-de-gira-blanco-2.jpg'
+      '/images/placeholder.png',
+      '/images/productos-hoodie-de-gira-blanco-2.jpg'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png',
+          '/images/placeholder.png',
+          '/images/placeholder.png',
         ]
       }
     ]
@@ -539,20 +562,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/productos-hoodie-de-gira-blanco-2.jpg'
+      '/images/placeholder.png',
+      '/images/productos-hoodie-de-gira-blanco-2.jpg'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png',
+          '/images/placeholder.png',
+          '/images/placeholder.png',
         ]
       }
     ]
@@ -564,20 +588,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/productos-hoodie-de-gira-blanco-2.jpg'
+      '/images/placeholder.png',
+      '/images/productos-hoodie-de-gira-blanco-2.jpg'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png',
+          '/images/placeholder.png',
+          '/images/placeholder.png',
         ]
       }
     ]
@@ -589,20 +614,21 @@ export const products = [
     price: 89.99,
     description: 'Classic white hoodie with premium finish',
     category: 'hoodies',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-      '/src/assets/images/productos-hoodie-de-gira-blanco-2.jpg'
+      '/images/placeholder.png',
+      '/images/productos-hoodie-de-gira-blanco-2.jpg'
     ],
     variants: [
       {
         color: 'White',
         size: ['S', 'M', 'L'],
         images: [
-          '/src/assets/images/placeholder.png',
-          '/src/assets/images/placeholder.png',
+          '/images/placeholder.png',
+          '/images/placeholder.png',
         ]
       }
     ]
@@ -615,16 +641,17 @@ export const products = [
     price: 29.99,
     description: 'Adjustable tour cap with embroidered logo',
     category: 'accessories',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
-    images: ['/src/assets/images/placeholder.png'],
+    isNew: false,
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
+    images: ['/images/placeholder.png'],
     variants: [
       {
         color: 'Black',
         size: ['One Size'],
-        images: ['/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+        images: ['/images/placeholder.png',
+        '/images/placeholder.png'
       ]
       }
     ]
@@ -636,18 +663,19 @@ export const products = [
     price: 24.99,
     description: 'Durable canvas tote bag with print',
     category: 'accessories',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
-    images: [   '/src/assets/images/placeholder.png',
-    '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
+    images: [   '/images/placeholder.png',
+    '/images/placeholder.png',
 ],
     variants: [
       {
         color: 'Natural',
         size: ['One Size'],
-        images: ['/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png']
+        images: ['/images/placeholder.png',
+        '/images/placeholder.png']
       }
     ]
   },
@@ -658,20 +686,21 @@ export const products = [
     price: 24.99,
     description: 'Stylish cap for any occasion',
     category: 'accessories',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-     '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+     '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-       '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+       '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -683,20 +712,21 @@ export const products = [
     price: 24.99,
     description: 'Stylish cap for any occasion',
     category: 'accessories',
- isNew: false,
-        essential: false,
-    image: '/src/assets/images/placeholder.png',
+    isNew: false,
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-   '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+   '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-      '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -710,20 +740,20 @@ export const products = [
     description: 'Stylish cap for any occasion',
     category: 'accessories',
     isNew: false,
-        essential: false,
-
-    image: '/src/assets/images/placeholder.png',
+    essential: false,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-       '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+       '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -736,20 +766,20 @@ export const products = [
     description: 'Stylish cap for any occasion',
     category: 'accessories',
     isNew: false,
-        essential: false,
-
-    image: '/src/assets/images/placeholder.png',
+    essential: false,
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
-  '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+  '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-         '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+         '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -762,20 +792,20 @@ export const products = [
     description: 'Stylish cap for any occasion',
     category: 'accessories',
     isNew: false,
-        essential: false,
-
-    image: '/src/assets/images/placeholder.png',
+    essential: false,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-     '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+     '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-       '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+       '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -788,20 +818,20 @@ export const products = [
     description: 'Stylish cap for any occasion',
     category: 'accessories',
     isNew: false,
-        essential: false,
-
-    image: '/src/assets/images/placeholder.png',
+    essential: false,
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-    '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+    '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-'/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+'/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -814,19 +844,20 @@ export const products = [
     description: 'Stylish cap for any occasion',
     category: 'accessories',
     isNew: true,
-        essential: true,
-    image: '/src/assets/images/placeholder.png',
+    essential: true,
+    stock: 10,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-        '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+        '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -840,18 +871,19 @@ export const products = [
     category: 'accessories',
     isNew: true,    
     essential: true,
-    image: '/src/assets/images/placeholder.png',
+    stock: 5,
+    image: '/images/placeholder.png',
     images: [
- '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+ '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-       '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+       '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -864,19 +896,20 @@ export const products = [
     description: 'Stylish cap for any occasion',
     category: 'accessories',
     isNew: true,
-        essential: true,
-    image: '/src/assets/images/placeholder.png',
+    essential: true,
+    stock: 20,
+    image: '/images/placeholder.png',
     images: [
-      '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+      '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-   '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+   '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -890,18 +923,19 @@ export const products = [
     category: 'accessories',
     isNew: true,
     essential: true,
-    image: '/src/assets/images/placeholder.png',
+    stock: 15,
+    image: '/images/placeholder.png',
     images: [
-   '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+   '/images/placeholder.png',
+        '/images/placeholder.png'
     ],
     variants: [
       { 
         color: 'White',
         size: ['One Size'],
         images: [
-        '/src/assets/images/placeholder.png',
-        '/src/assets/images/placeholder.png'
+        '/images/placeholder.png',
+        '/images/placeholder.png'
         ]
       }
     ]
@@ -914,21 +948,20 @@ export const newArrivalsProducts = products.filter(product => product.isNew);
 
 export const essentials = products.filter(product => product.essential);
 
-export const getProductBySlug = (slug) => {
+export function getProductBySlug(slug) {
   return products.find(product => product.slug === slug);
-};
+}
 
-export const getProductsByCategory = (category) => {
+export function getProductsByCategory(category) {
   return products.filter(product => product.category === category);
-};
-
+}
 
 export const collections = [
     {
       id: 1,
       title: 'T-SHIRTS',
       subtitle: 'T-shirts & tank tops',
-      image: '/src/assets/images/collection-remeras-top.jpg',
+      image: '/images/collection-remeras-top.jpg',
       position: 'left-top',
       buttonText: 'SHOP T-SHIRTS',
       link: '/collections/t-shirts'
@@ -937,7 +970,7 @@ export const collections = [
       id: 2,
       title: 'ACCESSORIES',
       subtitle: 'Dad hats & backet hats & more',
-      image: '/src/assets/images/collection-accesorios-bottom.jpg',
+      image: '/images/collection-accesorios-bottom.jpg',
       position: 'left-bottom',
       buttonText: 'SHOP ACCESSORIES',
       link: '/collections/accessories'
@@ -946,10 +979,9 @@ export const collections = [
       id: 3,
       title: 'HOODIES',
       subtitle: 'Hoodies & sweetshirts',
-      image: '/src/assets/images/collection-buzos-top.jpg',
+      image: '/images/collection-buzos-top.jpg',
       position: 'right',
       buttonText: 'SHOP HOODIES',
       link: '/collections/hoodies'
     }
   ];
-  

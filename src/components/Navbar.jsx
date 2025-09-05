@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import logo from '../assets/images/logo-nav.png';
+import logo from '/images/logo-nav.png';
 
 const Navbar = () => {
   const cartItems = useSelector(state => state.handleCart || []);
@@ -62,12 +62,14 @@ const Navbar = () => {
         {/* Mobile menu button */}
         <button
           className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          onClick={() => setMenuOpen(true)}
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
         >
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
-          </svg>
+          <div className="relative w-6 h-5">
+            <span className={`absolute left-0 w-full h-0.5 bg-current rounded transform transition-all duration-300 ease-in-out ${menuOpen ? 'rotate-45 top-2.5' : 'top-0'}`}></span>
+            <span className={`absolute right-0 w-3/5 h-0.5 bg-current rounded transform transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-0' : 'top-2'}`}></span>
+            <span className={`absolute left-0 w-full h-0.5 bg-current rounded transform transition-all duration-300 ease-in-out ${menuOpen ? '-rotate-45 top-2.5' : 'top-4'}`}></span>
+          </div>
         </button>
  
         {/* Desktop Menu */}
@@ -133,14 +135,6 @@ const Navbar = () => {
                 Profile
               </span>
             </NavLink>
-            {/* <NavLink to="/register" className="btn-nav-outline bg-transparent text-black border border-black px-3 py-2 mx-2 rounded-md hover:bg-black hover:text-white transition">
-              <span className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
-                </svg>
-                Register
-              </span>
-            </NavLink> */}
             <div className="relative" ref={cartRef}>
               <button 
                 onMouseEnter={() => setIsCartOpen(true)}
@@ -288,7 +282,7 @@ const Navbar = () => {
                 <NavLink onClick={() => setMenuOpen(false)} to="/login" className="btn-nav-outline block text-left py-2 px-4 text-gray-700 hover:text-indigo-600 font-medium">
                   <span className="flex items-center flex-row">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mr-2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25-2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                     </svg>
                     Login
                   </span>
@@ -334,4 +328,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

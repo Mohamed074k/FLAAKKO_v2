@@ -5,8 +5,7 @@ import VideoSection from '../components/VideoSection';
 import NewArrivals from '../components/NewArrivals';
 import Essentials from '../components/Essentials';
 import Collections from '../components/Collections';
-import Products from '../components/Products';
-import Footer from "../components/Footer";
+ import Footer from "../components/Footer";
 
 const Home = () => {
   return (

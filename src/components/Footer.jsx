@@ -1,12 +1,12 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaHome, FaUserPlus, FaBox, FaMapMarkerAlt, FaPhone, FaClock } from "react-icons/fa";
-import logo from "../assets/images/logo-hero.png";
+import logo from "/images/logo-hero.png";
 
 const Footer = () => {
   const quickLinks = [
     { name: "Home", path: "/", icon: <FaHome className="mr-2" /> },
     { name: "Register", path: "/register", icon: <FaUserPlus className="mr-2" /> },
-    { name: "Products", path: "/products", icon: <FaBox className="mr-2" /> },
+    { name: "Products", path: "/collections", icon: <FaBox className="mr-2" /> },
   ];
 
   const socialLinks = [
@@ -72,7 +72,7 @@ Shop smart, live better — everything you need in one place.            </p>
                 <span className="text-gray-400">+01228563612</span>
               </li>
               <li className="flex items-center">
-                <FaClock className="mr-3 flex-shrink-0" />
+                <FaClock className="mr-3 flex-shrink-0 animate-spin" />
                 <span className="text-gray-400">24 Hours Daily</span>
               </li>
             </ul>
@@ -99,12 +99,12 @@ Shop smart, live better — everything you need in one place.            </p>
             <p className="text-gray-400 text-sm mt-2 md:mt-0">
               Made by{' '}
               <a 
-                href="https://www.linkedin.com/in/mohamed-elsayed-074k/" 
+                href="https://hydratech-tawny.vercel.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:underline"
               >
-                Mohamed Elsayed
+                Hydra Tech
               </a>
             </p>
           </div>

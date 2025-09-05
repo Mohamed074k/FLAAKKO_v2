@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { incrementQty, decrementQty, removeFromCart } from "../store";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import Breadcrumb from "../components/Breadcrumb";
 
 const Cart = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -173,14 +174,17 @@ const Cart = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="container mx-auto py-8">
-        <h2 className="text-3xl font-bold mb-8">Shopping Cart</h2>
-        {state.length > 0 ? <ShowCart /> : <EmptyCart />}
-      </div>
+      <Breadcrumb />
+      <main className="flex-grow">
+        <div className="container mx-auto py-8">
+          <h2 className="text-3xl font-bold mb-8">Shopping Cart</h2>
+          {state.length > 0 ? <ShowCart /> : <EmptyCart />}
+        </div>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

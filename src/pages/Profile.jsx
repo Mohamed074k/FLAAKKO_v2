@@ -1,13 +1,25 @@
-import React, { useState } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaUser, FaEnvelope, FaPhone, FaHeart, FaShoppingBag, FaHistory, FaEdit, FaSignOutAlt } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
 import ScrollAnimation from '../components/ScrollAnimation';
+import Breadcrumb from '../components/Breadcrumb';
+// import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState('profile');
+  // const navigate = useNavigate();
+  
+  // useEffect(() => {
+  //   // Check if user is logged in
+  //   const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  //   if (!currentUser) {
+  //     // Redirect to login if not logged in
+  //     navigate('/login');
+  //   }
+  // }, [navigate]);
 
   // Static user data (will come from backend later)
   const userData = {
@@ -24,7 +36,7 @@ const Profile = () => {
       id: 1,
       name: 'Essential Tag Tee Black',
       price: 29.99,
-      image: '/src/assets/images/T-Shirts/essential-tag-tee-black-1.jpg',
+      image: '/src/assets/images/placeholder.png',
       category: 't-shirts',
       slug: 'essential-tag-tee-black'
     },
@@ -32,7 +44,7 @@ const Profile = () => {
       id: 2,
       name: 'Essential Sweatshirt Grey',
       price: 49.99,
-      image: '/src/assets/images/Hoodies/essential-sweatshirt-grey-1.jpg',
+      image: '/src/assets/images/placeholder.png',
       category: 'hoodies',
       slug: 'essential-sweatshirt-grey'
     },
@@ -40,7 +52,7 @@ const Profile = () => {
       id: 3,
       name: 'Essential Tag Dad Hat Black',
       price: 24.99,
-      image: '/src/assets/images/Accessories/essential-tag-dad-hat-black-1.jpg',
+      image: '/src/assets/images/placeholder.png',
       category: 'accessories',
       slug: 'essential-tag-dad-hat-black'
     }
@@ -105,10 +117,10 @@ const Profile = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
-      
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <Breadcrumb />
+      <main className="flex-grow">
         <ScrollAnimation yOffset={30}>
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 font-monument">My Profile</h1>
@@ -302,7 +314,7 @@ const Profile = () => {
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(order.status)}`}>
                             {order.status}
                           </span>
-                          <span className="text-lg font-bold text-gray-900">${order.total.toFixed(2)}</span>
+                          <span className="text-lg font-bold text-gray-900">{order.total.toFixed(2)} EGP</span>
                         </div>
                       </div>
                       
@@ -310,7 +322,7 @@ const Profile = () => {
                         {order.items.map((item, index) => (
                           <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
                             <span className="text-gray-700">{item.name} × {item.quantity}</span>
-                            <span className="text-gray-900 font-medium">${(item.price * item.quantity).toFixed(2)}</span>
+                            <span className="text-gray-900 font-medium">{(item.price * item.quantity).toFixed(2)} EGP</span>
                           </div>
                         ))}
                       </div>

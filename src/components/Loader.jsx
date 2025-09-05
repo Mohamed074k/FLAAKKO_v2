@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import loaderImage from '../assets/images/loader.png';
+import loaderImage from '/images/loader.png';
 
 const Loader = () => {
   const [isVisible, setIsVisible] = useState(true);
