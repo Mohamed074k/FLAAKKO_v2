@@ -10,18 +10,7 @@ import Breadcrumb from '../components/Breadcrumb';
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState('profile');
-  // const navigate = useNavigate();
   
-  // useEffect(() => {
-  //   // Check if user is logged in
-  //   const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  //   if (!currentUser) {
-  //     // Redirect to login if not logged in
-  //     navigate('/login');
-  //   }
-  // }, [navigate]);
-
-  // Static user data (will come from backend later)
   const userData = {
     name: 'Mohamed Elsayed',
     email: 'the.real.mohamed074@gmail.com',
@@ -36,7 +25,7 @@ const Profile = () => {
       id: 1,
       name: 'Essential Tag Tee Black',
       price: 29.99,
-      image: '/src/assets/images/placeholder.png',
+      image: '/images/placeholder.png',
       category: 't-shirts',
       slug: 'essential-tag-tee-black'
     },
@@ -44,7 +33,7 @@ const Profile = () => {
       id: 2,
       name: 'Essential Sweatshirt Grey',
       price: 49.99,
-      image: '/src/assets/images/placeholder.png',
+      image: '/images/placeholder.png',
       category: 'hoodies',
       slug: 'essential-sweatshirt-grey'
     },
@@ -52,7 +41,7 @@ const Profile = () => {
       id: 3,
       name: 'Essential Tag Dad Hat Black',
       price: 24.99,
-      image: '/src/assets/images/placeholder.png',
+      image: '/images/placeholder.png',
       category: 'accessories',
       slug: 'essential-tag-dad-hat-black'
     }

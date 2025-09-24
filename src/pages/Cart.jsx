@@ -106,7 +106,7 @@ const Cart = () => {
                         </div>
                         
                         <div className="font-semibold">
-                          ${(item.price * (item.qty || 1)).toFixed(2)}
+                          {(item.price * (item.qty || 1)).toFixed(2)} EGP
                         </div>
                         
                         <button
@@ -138,7 +138,7 @@ const Cart = () => {
               <div className="space-y-4">
                 <div className="flex justify-between">
                   <span>Subtotal ({totalItems} items)</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>{subtotal.toFixed(2)} EGP</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Shipping</span>
