@@ -34,7 +34,7 @@
 //     dotsClass: "slick-dots custom-dots",
 //   };
 
-//   const slides = [slide1, slide2, slide3];
+///   const slides = [slide1, slide2, slide3];
 //   const mobileSlides = [mobileSlide1, mobileSlide2, mobileSlide3];
 
 //   return (
